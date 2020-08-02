@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AndroidAssessment</string>
+    <string name="network_error_msg">Network error. Swipe down to refresh.</string>
+</resources>
