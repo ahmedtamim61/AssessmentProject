@@ -13,17 +13,6 @@ import javax.inject.Singleton
 @Component( modules = [AppModule::class])
 interface AppComponent {
 
-//    fun getNetworkDataSource() : NetworkDataSource
-//    fun getAppRepository() : AppRepository
-//
-//    @Component.Builder
-//    interface Builder {
-//
-//        @BindsInstance
-//        fun application(application: MainApplication) : Builder
-//        fun build() : AppComponent
-//    }
-
     fun inject(appRepository: AppRepository)
     fun inject(networkDataSource: NetworkDataSource)
     fun inject(viewModelFactory: AppViewModelFactory)
