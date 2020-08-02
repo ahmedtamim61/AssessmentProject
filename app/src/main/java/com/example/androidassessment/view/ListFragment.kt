@@ -16,6 +16,7 @@ import com.example.androidassessment.R
 import com.example.androidassessment.model.Data
 import com.example.androidassessment.model.Model
 import com.example.androidassessment.viewmodel.AppViewModel
+import com.example.androidassessment.viewmodel.AppViewModelFactory
 
 const val CACHED_DATA : String = "cachedData"
 class ListFragment : Fragment() {
@@ -38,7 +39,7 @@ class ListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        appViewModel = ViewModelProviders.of(requireActivity()).get(AppViewModel::class.java)
+        appViewModel = ViewModelProviders.of(requireActivity(), AppViewModelFactory()).get(AppViewModel::class.java)
         recyclerView?.layoutManager = LinearLayoutManager(requireContext())
         refreshLayout?.setOnRefreshListener { refreshData() }
         cachedData = savedInstanceState?.getParcelable(CACHED_DATA)

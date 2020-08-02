@@ -37,7 +37,7 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideAppRepository(): AppRepository = AppRepository
+    fun provideAppRepository(): AppRepository = AppRepository()
 
     @Provides
     @Singleton
